@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0d0b2b;
+  color: #ffffff;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0d0b2b;
+}
+::-webkit-scrollbar-thumb {
+  background: #2e2a5e;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7c3aed;
+}
+
+/* Nav liquid glass effect */
+.nav-link {
+  position: relative;
+  padding: 0.5rem 0.8rem;
+  border-radius: 12px;
+  background: rgba(124, 58, 237, 0);
+  border: 1px solid rgba(124, 58, 237, 0);
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.nav-link:hover {
+  background: rgba(124, 58, 237, 0.15);
+  border: 1px solid rgba(124, 58, 237, 0.5);
+}
+
+.nav-link.active {
+  background: rgba(124, 58, 237, 0.3);
+  border: 1px solid rgba(124, 58, 237, 0.8);
+  color: #7c3aed !important;
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.3);
+}
+
+/* Scroll-triggered dot animations */
+@keyframes floatDotTop {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(20px, -20px) scale(1.3);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+@keyframes floatDotBottom {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-20px, 20px) scale(1.3);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+/* Glow animation on scroll */
+@keyframes glowPulse {
+  0%, 100% {
+    opacity: 0.5;
+    box-shadow: 0 0 20px rgba(124, 58, 237, 0.3);
+  }
+  50% {
+    opacity: 0.8;
+    box-shadow: 0 0 40px rgba(124, 58, 237, 0.5);
+  }
+}
+
+@keyframes glowIntense {
+  0%, 100% {
+    box-shadow: 0 0 30px rgba(124, 58, 237, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 50px rgba(124, 58, 237, 0.8);
+  }
+}
+
+/* Rotating dot animations */
+@keyframes rotateDotFast {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(360deg);
+  }
+}
+
+@keyframes rotateDotSlow {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(360deg);
+  }
+}
+
+@layer utilities {
+  .animate-fadeIn {
+    animation: fadeIn 0.6s ease-in;
+  }
+  
+  .animate-float-top {
+    animation: floatDotTop 3s ease-in-out infinite;
+  }
+  
+  .animate-float-bottom {
+    animation: floatDotBottom 3s ease-in-out infinite 0.5s;
+  }
+  
+  .animate-glow-pulse {
+    animation: glowPulse 2s ease-in-out infinite;
+  }
+  
+  .animate-glow-intense {
+    animation: glowIntense 1.5s ease-in-out infinite;
+  }
+  
+}
+
+/* Purple glow card hover */
+.card-glow:hover {
+  box-shadow: 0 0 30px rgba(124, 58, 237, 0.25);
+}
