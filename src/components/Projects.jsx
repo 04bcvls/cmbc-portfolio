@@ -5,7 +5,7 @@ const projects = [
     title: 'Ursal Rice Milling Services',
     type: 'Full-stack Web Application',
     tech: ['Next.js', 'Tailwind CSS', 'MongoDB'],
-    preview: './assets/ursal-rice-preview.png',
+    preview: '/assets/ursal-rice-preview.png',
     highlights: [
       'Automated inventory and sales order management system for a rice milling enterprise',
       'Built with Next.js full-stack framework, Tailwind CSS for styling, and MongoDB for database',
@@ -17,7 +17,7 @@ const projects = [
     title: 'Faculty Consultation Scheduler',
     type: 'Android Application',
     tech: ['Flutter', 'Firebase', 'Material Design'],
-    preview: './assets/facconsult-android-preview.png',
+    preview: '/assets/facconsult-android-preview.png',
     highlights: [
       'Real-time appointment management system for consultation bookings between students and faculty with role-based access control',
       'Built with auto-synced notification system when booking status changes',

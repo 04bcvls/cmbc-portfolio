@@ -32,7 +32,7 @@ export default function BackToTop() {
       aria-label="Back to top"
     >
       <img
-        src="./assets/logo/direction-top-white.svg"
+        src="/assets/logo/direction-top-white.svg"
         alt="Back to top"
         className="w-5 h-5"
       />

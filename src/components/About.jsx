@@ -15,9 +15,9 @@ const stats = [
 ];
 
 const portraits = [
-  './assets/car/portrait-car-1.jpg',
-  './assets/car/portrait-car-2.jpg',
-  './assets/car/portrait-car-3.jpg',
+  '/assets/car/portrait-car-1.jpg',
+  '/assets/car/portrait-car-2.jpg',
+  '/assets/car/portrait-car-3.jpg',
 ];
 
 export default function About() {

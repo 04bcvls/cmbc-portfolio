@@ -45,7 +45,7 @@ export default function Hero() {
 
           {!imgError ? (
             <img
-              src="./assets/Civiles_about.jpg"
+              src="/assets/Civiles_about.jpg"
               alt="Christian Mari Civiles"
               className={`relative w-64 h-64 md:w-72 md:h-72 object-cover rounded-3xl
                          border-2 border-[#2e2a5e] transition-all duration-300
