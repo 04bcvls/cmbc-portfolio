@@ -91,7 +91,7 @@ export default function TechStacks() {
                   <span
                     key={item.name}
                     className="px-3 py-1.5 text-xs font-dmSans
-                               border border-[#2e2a5e] text-[#7c3aed]
+                               border border-[#2e2a5e] text-[#b193e4]
                                rounded-full
                                hover:bg-[#7c3aed] hover:text-white hover:border-[#7c3aed]
                                transition-colors duration-200 cursor-default

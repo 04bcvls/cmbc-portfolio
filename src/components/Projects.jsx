@@ -153,7 +153,7 @@ export default function Projects() {
                     <span
                       key={t}
                       className="px-3 py-1 text-xs font-dmSans
-                               border border-[#2e2a5e] text-[#7c3aed]
+                               border border-[#2e2a5e] text-[#b193e4]
                                rounded-full bg-[#7c3aed]/5
                                group-hover:border-[#7c3aed]/50 transition-colors"
                     >

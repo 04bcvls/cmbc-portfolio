@@ -58,7 +58,7 @@ export default function Affiliation() {
             <div className="flex flex-col items-start sm:items-end gap-2 flex-shrink-0">
               <span className="px-3 py-1 text-xs font-dmSans font-medium
                                bg-[#7c3aed]/15 border border-[#7c3aed]/30
-                               text-[#7c3aed] rounded-full">
+                               text-[#b193e4] rounded-full">
                 Member
               </span>
               <p className="font-dmSans text-xs text-[#a0aec0] whitespace-nowrap">
