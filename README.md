@@ -1,6 +1,6 @@
 # cmbc Portfolio
 
-A Computer Science student's Portfolio website built with React, Tailwind CSS, and Vite.
+04bcvls's Computer Science student's Portfolio website built with React, Tailwind CSS, and Vite.
 
 ## Tech Stack:
 - React 18.2.0
@@ -9,7 +9,5 @@ A Computer Science student's Portfolio website built with React, Tailwind CSS, a
 - Figma
 
 ---
-
-This project is personal portfolio and is available under the MIT License.
 
 © April 2026
