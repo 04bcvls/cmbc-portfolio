@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import logoImage from '../../assets/cmbc_clouddancelglass.png';
 
 const navItems = [
   { id: 'about', label: 'About' },
