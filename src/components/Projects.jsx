@@ -7,6 +7,11 @@ const ITEMS_PER_PAGE = 4;
 const buildFacebookEmbedUrl = (videoUrl) =>
   `https://www.facebook.com/plugins/video.php?height=314&href=${encodeURIComponent(videoUrl)}&show_text=false&width=560&t=0`;
 
+const buildGoogleDriveEmbedUrl = (driveUrl) => {
+  const match = driveUrl.match(/\/file\/d\/([^/]+)/);
+  return match ? `https://drive.google.com/file/d/${match[1]}/preview` : driveUrl;
+};
+
 const projectCategories = [
   {
     id: 'audio-visual',
@@ -19,6 +24,7 @@ const projectCategories = [
         type: 'Ateneo de Davao University - Computer Studies Student Executive Council (ADDU-CSSEC)',
         year: '2026',
         access: 'https://web.facebook.com/reel/2354909978316728',
+        driveUrl: 'https://drive.google.com/file/d/1vsxxBEoMh8lkLADlYl-Cc7_9p1UBk7PK/view?usp=sharing',
       },
       {
         id: '1488473429300354',
@@ -61,6 +67,7 @@ const projectCategories = [
         type: 'Ateneo de Davao University - Computer Studies Student Executive Council (ADDU-CSSEC)',
         year: '2025',
         access: 'https://web.facebook.com/reel/9398423373583063',
+        driveUrl: 'https://drive.google.com/file/d/1mefLhYBjDRlfifQ0-RrFUf15lfC3Xl_j/view?usp=sharing',
       },
       {
         id: '1920848721817155',
@@ -75,6 +82,7 @@ const projectCategories = [
         type: 'Ateneo de Davao University - Computer Studies Student Executive Council (ADDU-CSSEC)',
         year: '2025',
         access: 'https://web.facebook.com/reel/2844158472410438',
+        driveUrl: 'https://drive.google.com/file/d/11WbscQvRMGz74aXDicG3PJzB4KwYQBZV/view?usp=sharing',
       },
       {
         id: '8012975128794555',
@@ -96,6 +104,7 @@ const projectCategories = [
         type: 'Notre Dame of Cotabato Opening Day 2024',
         year: '2024',
         access: 'https://web.facebook.com/reel/7635949963179954',
+        driveUrl: 'https://drive.google.com/file/d/1z_PeZ7hC1j8SxcBB_GxZqfeQXPIz_Stw/view?usp=sharing',
       },
       {
         id: '1432353797516626',
@@ -103,6 +112,7 @@ const projectCategories = [
         type: 'Notre Dame of Cotabato High School Days 2023',
         year: '2023',
         access: 'https://web.facebook.com/reel/1432353797516626',
+        driveUrl: 'https://drive.google.com/file/d/1jrdDpQuk9ncGz0R3iJHjx1KjNJP8_Yy_/view?usp=sharing',
       },
       {
         id: '494792776198486',
@@ -117,6 +127,7 @@ const projectCategories = [
         type: 'Notre Dame of Cotabato Intramurals 2023',
         year: '2023',
         access: 'https://web.facebook.com/reel/713073977187592',
+        driveUrl: 'https://drive.google.com/file/d/1MO490rwVGV3cwowpS7hnMucS3flCi39X/view?usp=sharing',
       },
       {
         id: '525436829000454',
@@ -138,6 +149,7 @@ const projectCategories = [
         type: 'Notre Dame of Cotabato Opening Day 2022',
         year: '2022',
         access: 'https://web.facebook.com/reel/740697060370155',
+        driveUrl: 'https://drive.google.com/file/d/1rivOL_Ss4dthAlZDnfkoz22Xo3k8hC_B/view?usp=sharing',
       },
       {
         id: '187723100016266',
@@ -533,17 +545,21 @@ export default function Projects() {
                               <BrandingCarousel title={project.title} images={project.images} />
                             )}
 
-                            {/* Embedded Facebook Video (Audio-Visual) */}
-                            {isAudioVisual && project.access && (
+                            {/* Embedded Video (Google Drive if available, otherwise Facebook) */}
+                            {isAudioVisual && (project.driveUrl || project.access) && (
                               <div className="relative w-full aspect-video bg-black overflow-hidden border-b border-[#2e2a5e] flex items-center justify-center">
                                 {isSelected && (
                                   <iframe
-                                    src={buildFacebookEmbedUrl(project.access)}
+                                    src={
+                                      project.driveUrl
+                                        ? buildGoogleDriveEmbedUrl(project.driveUrl)
+                                        : buildFacebookEmbedUrl(project.access)
+                                    }
                                     title={project.title}
                                     className="w-full h-full border-0"
                                     scrolling="no"
                                     loading="lazy"
-                                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share; fullscreen"
                                     allowFullScreen
                                   />
                                 )}
