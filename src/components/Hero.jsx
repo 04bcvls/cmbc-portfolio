@@ -27,14 +27,14 @@ export default function Hero() {
     <section
       id="hero"
       ref={ref}
-      className={`min-h-screen flex items-center pt-24 pb-16 transition-all duration-700 overflow-visible
+      className={`min-h-screen flex items-center pt-24 pb-16 transition-all duration-700 overflow-x-clip
         ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
     >
-      <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-6 md:gap-16 items-center w-full">
+      <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-8 lg:gap-16 items-center w-full">
 
         {/* Profile Image */}
         <div 
-          className="relative flex justify-center order-first md:order-last transition-all duration-300 overflow-visible"
+          className="relative flex justify-center order-first lg:order-last transition-all duration-300 min-w-0"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
@@ -47,13 +47,13 @@ export default function Hero() {
             <img
               src="/assets/Civiles_about.jpg"
               alt="Christian Mari Civiles"
-              className={`relative w-64 h-64 md:w-72 md:h-72 object-cover rounded-3xl
+              className={`relative w-56 h-56 sm:w-64 sm:h-64 lg:w-72 lg:h-72 object-cover rounded-3xl
                          border-2 border-[#2e2a5e] transition-all duration-300
                          ${isHovered ? 'shadow-[0_0_60px_rgba(124,58,237,0.6)]' : 'shadow-[0_0_40px_rgba(124,58,237,0.3)]'}`}
               onError={() => setImgError(true)}
             />
           ) : (
-            <div className={`relative w-64 h-64 md:w-72 md:h-72 rounded-3xl
+            <div className={`relative w-56 h-56 sm:w-64 sm:h-64 lg:w-72 lg:h-72 rounded-3xl
                             bg-[#1a1740] border-2 border-[#2e2a5e]
                             flex items-center justify-center transition-all duration-300
                             ${isHovered ? 'shadow-[0_0_60px_rgba(124,58,237,0.6)]' : 'shadow-[0_0_40px_rgba(124,58,237,0.3)]'}`}>
@@ -62,19 +62,19 @@ export default function Hero() {
           )}
 
           {/* Floating decoration dots - static positions */}
-          <div className="absolute -top-4 -right-4 w-3 h-3 rounded-full bg-[#7c3aed] opacity-60" />
+          <div className="absolute -top-4 -right-2 sm:-right-4 w-3 h-3 rounded-full bg-[#7c3aed] opacity-60" />
           <div className="absolute -bottom-6 -left-2 w-2 h-2 rounded-full bg-[#7c3aed] opacity-40" />
         </div>
 
         {/* Text Content */}
-        <div className="space-y-5">
+        <div className="space-y-5 min-w-0">
           <p className="text-white font-dmSans text-lg mt-3">
             {greeting}! I am
           </p>
 
-          <h1 className="text-4xl md:text-5xl leading-tight">
-            <span className="font-montserrat font-extrabold inline-block whitespace-nowrap">Christian Mari Civiles</span>
-            <span className="text-[#a0aec0] font-normal text-2xl md:text-2xl mt-2 font-dmSans block">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl leading-tight">
+            <span className="font-montserrat font-extrabold inline-block xl:whitespace-nowrap">Christian Mari Civiles</span>
+            <span className="text-[#a0aec0] font-normal text-xl sm:text-2xl mt-2 font-dmSans block">
                Web Developer & Designer, and Social Media Campaigner. I am pleased to explore something new.
             </span>
             

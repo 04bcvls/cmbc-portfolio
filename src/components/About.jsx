@@ -51,10 +51,10 @@ export default function About() {
         <div className="flex flex-col gap-10">
           
           {/* Top Section: Paragraph + Carousel */}
-          <div className="grid md:grid-cols-2 gap-10">
+          <div className="grid lg:grid-cols-2 gap-10">
 
             {/* Left Column: Paragraph + Stats */}
-            <div className="space-y-6">
+            <div className="space-y-6 min-w-0">
               {/* Paragraph */}
               <div className="space-y-4">
                 <p className="font-dmSans text-[#a0aec0] text-base leading-relaxed">
@@ -92,7 +92,7 @@ export default function About() {
             </div>
 
             {/* Portrait Carousel */}
-            <div className="relative w-90 h-80 rounded-2xl border border-[#2e2a5e] overflow-hidden"
+            <div className="relative w-full h-80 rounded-2xl border border-[#2e2a5e] overflow-hidden"
                  style={{ boxShadow: '0 0 30px rgba(124, 58, 237, 0.4)' }}>
               <div className="absolute inset-0 rounded-2xl overflow-hidden">
                 <img

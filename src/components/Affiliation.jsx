@@ -102,7 +102,7 @@ export default function Affiliation() {
                 </div>
 
                 {/* Details */}
-                <div className="flex-1 space-y-1">
+                <div className="flex-1 min-w-0 space-y-1">
                   <h3 className="font-montserrat font-bold text-xl text-white">
                     {item.name}
                   </h3>

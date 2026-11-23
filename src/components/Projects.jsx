@@ -509,11 +509,11 @@ export default function Projects() {
                 aria-labelledby={tabId}
                 hidden={!isSelected}
                 tabIndex={isSelected && !hasFocusableItems ? 0 : undefined}
-                className={`col-start-1 row-start-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#7c3aed] rounded-2xl ${
+                className={`col-start-1 row-start-1 min-w-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#7c3aed] rounded-2xl ${
                   isSelected ? 'relative z-10' : 'pointer-events-none'
                 }`}
               >
-                <div>
+                <div className="min-w-0">
                   {totalItems > 0 ? (
                     <>
                       <div
