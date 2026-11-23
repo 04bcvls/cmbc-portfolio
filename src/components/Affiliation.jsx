@@ -15,7 +15,7 @@ const affiliations = [
     org: 'Bangsamoro Parliament',
     school: 'Bangsamoro Autonomous Region in Muslim Mindanao',
     role: 'Social Media Campaign Assistant',
-    period: 'Nov 2026 – Present',
+    period: 'Nov 2025 – Present',
     logo: './assets/mp-ah.png',
     alt: 'Abrar J. Hataman logo',
   },

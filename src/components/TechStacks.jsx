@@ -142,8 +142,8 @@ export default function TechStacks() {
                 {items.map((item) => (
                   <span
                     key={item.name}
-                    className="px-3 py-1.5 text-xs font-dmSans
-                               border border-[#2e2a5e] text-[#b193e4]
+                    className="px-3 py-1.5 text-xs font-montserrat font-semibold
+                               border border-[#2e2a5e] text-[#96b3c2]
                                rounded-full
                                hover:bg-[#7c3aed] hover:text-white hover:border-[#7c3aed]
                                transition-colors duration-200 cursor-default

@@ -64,7 +64,7 @@ export default function About() {
                 </p>
                 <p className="font-dmSans text-[#a0aec0] text-base leading-relaxed">
                   I am willing to contribute to various projects and collaborate with teams to
-                  deliver a good user experience and public service while broadening my skills.
+                  deliver good user experience and public service while broadening my skills.
                   Being <span className="text-white font-medium">Adaptive </span> 
                   is one of my strengths, and I am ready to adapt progress and embark various challenges.
                 </p>
