@@ -63,7 +63,7 @@ export default function Navbar() {
               <a
                 href={`#${id}`}
                 className={`nav-link transition-all duration-300
-                  ${activeSection === id ? 'active text-[#7c3aed]' : 'text-gray-300 hover:text-white'}`}
+                  ${activeSection === id ? 'active text-[#96b3c2]' : 'text-gray-300 hover:text-white'}`}
               >
                 {label}
               </a>
@@ -94,7 +94,7 @@ export default function Navbar() {
               <a
                 href={`#${id}`}
                 onClick={() => setMenuOpen(false)}
-                className={`block py-1 transition-colors ${activeSection === id ? 'text-[#7c3aed]' : 'text-gray-300 hover:text-white'}`}
+                className={`block py-1 transition-colors ${activeSection === id ? 'text-[#96b3c2]' : 'text-gray-300 hover:text-white'}`}
               >
                 {label}
               </a>

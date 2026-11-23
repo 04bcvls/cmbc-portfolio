@@ -5,20 +5,41 @@ import Projects from './components/Projects';
 import TechStacks from './components/TechStacks';
 import Affiliation from './components/Affiliation';
 import BackToTop from './components/BackToTop';
+import DarkVeil from './components/DarkVeil';
 
 function App() {
   return (
-    <div className="bg-[#0d0b2b] text-white font-dmSans min-h-screen">
-      <Navbar />
-      <Hero />
-      <About />
-      <Projects />
-      <TechStacks />
-      <Affiliation />
-      <BackToTop />
+    <div className="relative bg-[#0d0b2b] text-white font-dmSans min-h-screen">
+      {/* Fixed Animated Background */}
+      <div className="fixed inset-0 z-0 pointer-events-none">
+        <DarkVeil
+          color="#7c3aed"
+          opacity={0.45}
+          speed={0.45}
+          scale={1}
+          flow={1}
+          warp={0}
+          brightness={0.95}
+          glow={0.45}
+          sheen={0.15}
+          grain={0.03}
+          mouseInteraction={true}
+          mouseStrength={0.8}
+        />
+      </div>
 
-      {/* Footer */}
-      <footer className="bg-[#1f1540] py-8 border-t border-[#2e2a5e]">
+      {/* Main Content */}
+      <div className="relative z-10">
+        <Navbar />
+        <Hero />
+        <About />
+        <Projects />
+        <TechStacks />
+        <Affiliation />
+        <BackToTop />
+
+        {/* Footer */}
+        <footer className="bg-[#1f1540]/90 backdrop-blur-sm py-8 border-t border-[#2e2a5e]">
         <div className="w-full max-w-6xl mx-auto px-6">
           {/* Main Footer */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-6">
@@ -114,6 +135,7 @@ function App() {
           </div>
         </div>
       </footer>
+      </div>
     </div>
   );
 }

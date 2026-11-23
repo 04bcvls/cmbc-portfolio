@@ -73,9 +73,9 @@ export default function Hero() {
           </p>
 
           <h1 className="text-4xl md:text-5xl leading-tight">
-            <span className="font-montserrat font-extrabold inline-block whitespace-nowrap">Christian Mari Civiles,</span>
+            <span className="font-montserrat font-extrabold inline-block whitespace-nowrap">Christian Mari Civiles</span>
             <span className="text-[#a0aec0] font-normal text-2xl md:text-2xl mt-2 font-dmSans block">
-              a Web and Mobile Developer, and I am pleased to explore something new.
+               Web Developer & Designer, and Social Media Campaigner. I am pleased to explore something new.
             </span>
             
           </h1>
@@ -101,11 +101,13 @@ export default function Hero() {
             </a>
             <a
               href="#about"
-              className="inline-block px-7 py-3 border border-[#2e2a5e]
+              className="inline-block px-7 py-3 border border-[#2e2a5e] bg-[#2e2a5e]/30
                          text-[#a0aec0] hover:text-white hover:border-[#7c3aed]
                          text-xs font-montserrat font-semibold uppercase tracking-widest
                          rounded-lg transition-all duration-200
-                         hover:-translate-y-[2px]"
+                         hover:-translate-y-[2px]
+                         focus-visible:outline-none focus-visible:ring-2
+                         focus-visible:ring-[#7c3aed] focus-visible:ring-inset"
             >
               Learn More
             </a>

@@ -3,13 +3,13 @@ import useInView from '../hooks/useInView';
 
 const stats = [
   {
-    label: '3rd Year CS Student',
+    label: 'BS Computer Science',
     sub: 'Ateneo de Davao University',
     icon: '🎓',
   },
   {
-    label: 'Multi-Platform Projects',
-    sub: 'Web & Mobile Applications',
+    label: 'Multimedia Projects',
+    sub: 'Web Applications and AV Presentations',
     icon: '🌐',
   },
 ];
@@ -36,7 +36,7 @@ export default function About() {
     <section
       id="about"
       ref={ref}
-      className={`py-24 bg-[#120f35] transition-all duration-700
+      className={`py-24 bg-[#120f35]/85 transition-all duration-700
         ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
     >
       <div className="w-full max-w-6xl mx-auto px-6">
@@ -58,15 +58,15 @@ export default function About() {
               {/* Paragraph */}
               <div className="space-y-4">
                 <p className="font-dmSans text-[#a0aec0] text-base leading-relaxed">
-                  Junior Computer Science student with experience in developing
-                  web and mobile applications. Developed projects built with{' '}
-                  <span className="text-white font-medium">Next.js, MongoDB, and Flutter</span>.
+                  Computer Science student with experience in developing
+                  web applications, managing social media pages, and delivering multimedia content. Developed projects built with{' '}
+                  <span className="text-white font-medium">Next.js, Flutter, Canva, Adobe Premiere Pro & After Effects</span>.
                 </p>
                 <p className="font-dmSans text-[#a0aec0] text-base leading-relaxed">
                   I am willing to contribute to various projects and collaborate with teams to
-                  deliver a good user experience and also to broaden my skills.
+                  deliver a good user experience and public service while broadening my skills.
                   Being <span className="text-white font-medium">Adaptive </span> 
-                  is one of my strengths, and I am ready to adapt progress and embark challenges in the field of software development.
+                  is one of my strengths, and I am ready to adapt progress and embark various challenges.
                 </p>
               </div>
 
